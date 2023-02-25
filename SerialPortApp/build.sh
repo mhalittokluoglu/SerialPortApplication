@@ -1,0 +1,3 @@
+cd BuildDirLinux
+make
+cd ..
