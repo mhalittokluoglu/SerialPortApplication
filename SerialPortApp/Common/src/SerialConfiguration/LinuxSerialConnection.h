@@ -1,7 +1,7 @@
 #ifndef _LINUXSERIALCONNECTION_H_
 #define _LINUXSERIALCONNECTION_H_
 
-#include "ISerialConnection.h"
+#include "SerialConfiguration/ISerialConnection.h"
 #include "termios.h"
 
 class LinuxSerialConnection : public ISerialConnection

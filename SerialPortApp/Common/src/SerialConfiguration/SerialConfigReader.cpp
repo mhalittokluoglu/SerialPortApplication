@@ -1,4 +1,4 @@
-#include "SerialConfigReader.h"
+#include "SerialConfiguration/SerialConfigReader.h"
 #ifdef LOG_ENABLED
 #include "Logger.h"
 #endif

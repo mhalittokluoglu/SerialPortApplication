@@ -1,4 +1,4 @@
-#include "SerialConnectionFactory.h"
+#include "SerialConfiguration/SerialConnectionFactory.h"
 #ifdef WINDOWS_SYSTEM
 #include "WindowsSerialConnection.h"
 #endif // WINDOWS_SYSTEM

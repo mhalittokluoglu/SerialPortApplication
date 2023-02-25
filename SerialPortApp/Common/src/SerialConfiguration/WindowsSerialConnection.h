@@ -1,6 +1,6 @@
 #ifndef _WINDOWSSERIALCONNECTION_H_
 #define _WINDOWSSERIALCONNECTION_H_
-#include "ISerialConnection.h"
+#include "SerialConfiguration/ISerialConnection.h"
 #include <Windows.h>
 class WindowsSerialConnection : public ISerialConnection
 {

@@ -1,12 +1,14 @@
 #ifdef LOG_ENABLED
 #include "Logger.h"
 #endif
-#include "SerialConnectionFactory.h"
-#include "SerialConfigReader.h"
+#include "SerialConfiguration/SerialConnectionFactory.h"
+#include "SerialConfiguration/SerialConfigReader.h"
 #include "EndianController.h"
 #include <cstring>
 #include <cstdio>
 #include <iostream>
+#include "CRCGenerator.h"
+#include "Commands/BaseCommand.h"
 
   
 int main()
@@ -23,6 +25,7 @@ int main()
         Logger::LOG_DEBUG(COMPONENT_SERVER, "System is Little Endian!");
 #endif
     }
+
     ISerialConnection* serialConnection = SerialConnectionFactory::CreateSerialConnection();
     SerialConfiguration serialConfiguration;
     SerialConfigReader reader;
@@ -40,6 +43,20 @@ int main()
 #endif
     }
 
+    BaseCommand command;
+    command.m_CommandLength = 0x2;
+    command.m_CommandNo = 0xd;
+    uint8_t buffer[ByteStream::BUFFER_LENGTH];
+    ByteStream stream(buffer);
+    command.Serialize(stream);
+    if (serialConnection->Send((char*)buffer, command.m_CommandLength + 1))
+    {
+#ifdef LOG_ENABLED
+        Logger::LOG_DEBUG(COMPONENT_SERVER, "Message: with %d length sent", command.m_CommandLength);
+#endif
+    }
+
+    /*
     char message[255];
     while (true)
     {
@@ -61,6 +78,7 @@ int main()
 #endif
         }
     }
+    */
 
     return 0;
 }

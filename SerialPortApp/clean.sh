@@ -1,1 +1,1 @@
-rm -rf ./BuildDir
+rm -rf ./BuildDirLinux
