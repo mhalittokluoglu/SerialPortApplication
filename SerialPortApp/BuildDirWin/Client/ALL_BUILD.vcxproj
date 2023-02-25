@@ -25,7 +25,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{B4C50F20-82B5-3C95-8EFE-84D99F23C667}</ProjectGuid>
+    <ProjectGuid>{4F1E483C-3129-3F67-A274-FD2235EFC85C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -108,12 +108,12 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Client\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/Client/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/Client/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp -BC:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/BuildDirWin --check-stamp-file C:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/BuildDirWin/Client/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp -BC:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/BuildDirWin --check-stamp-file C:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/BuildDirWin/Client/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -122,12 +122,12 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\Client\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\Client\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BuildInParallel>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/Client/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/Client/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp -BC:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/BuildDirWin --check-stamp-file C:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/BuildDirWin/Client/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp -BC:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/BuildDirWin --check-stamp-file C:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/BuildDirWin/Client/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -136,12 +136,12 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\Client\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\Client\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</BuildInParallel>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/Client/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/Client/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp -BC:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/BuildDirWin --check-stamp-file C:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/BuildDirWin/Client/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp -BC:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/BuildDirWin --check-stamp-file C:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/BuildDirWin/Client/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -150,12 +150,12 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\Client\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\Client\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</BuildInParallel>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/Client/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/Client/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp -BC:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/BuildDirWin --check-stamp-file C:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/BuildDirWin/Client/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp -BC:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/BuildDirWin --check-stamp-file C:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/BuildDirWin/Client/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -164,21 +164,21 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\Client\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\Client\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\ZERO_CHECK.vcxproj">
-      <Project>{1A98A245-7495-3747-A25A-F953023E8201}</Project>
+    <ProjectReference Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\ZERO_CHECK.vcxproj">
+      <Project>{1865600E-A636-3A95-BFE0-D87B67347640}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\Client\Client.vcxproj">
-      <Project>{D7C1BBB8-FA94-37D6-A307-06710203251D}</Project>
+    <ProjectReference Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\Client\Client.vcxproj">
+      <Project>{B7EA3D96-4B28-3E6F-AEE2-47641A1FC3D9}</Project>
       <Name>Client</Name>
     </ProjectReference>
   </ItemGroup>

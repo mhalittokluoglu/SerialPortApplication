@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8CE1D043-55CA-3543-A156-1D090CDA36B8}</ProjectGuid>
+    <ProjectGuid>{521ED3D2-BD1F-3CA2-8DE0-AF885745A829}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,26 +59,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\Common\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\Common\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Common.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Common</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\Common\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\Common\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Common.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Common</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\Common\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\Common\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Common.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Common</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\Common\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\Common\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Common.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Common</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -94,10 +94,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;WINDOWS_SYSTEM;LOG_ENABLED;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -110,7 +110,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -126,10 +126,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOWS_SYSTEM;LOG_ENABLED;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -142,7 +142,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -158,10 +158,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOWS_SYSTEM;LOG_ENABLED;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -174,7 +174,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -189,10 +189,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOWS_SYSTEM;LOG_ENABLED;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -204,12 +204,12 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/Common/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/Common/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp -BC:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/BuildDirWin --check-stamp-file C:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/BuildDirWin/Common/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp -BC:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/BuildDirWin --check-stamp-file C:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/BuildDirWin/Common/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -218,12 +218,12 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\Common\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\Common\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BuildInParallel>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/Common/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/Common/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp -BC:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/BuildDirWin --check-stamp-file C:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/BuildDirWin/Common/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp -BC:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/BuildDirWin --check-stamp-file C:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/BuildDirWin/Common/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -232,12 +232,12 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\Common\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\Common\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</BuildInParallel>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/Common/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/Common/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp -BC:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/BuildDirWin --check-stamp-file C:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/BuildDirWin/Common/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp -BC:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/BuildDirWin --check-stamp-file C:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/BuildDirWin/Common/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -246,12 +246,12 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\Common\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\Common\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</BuildInParallel>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/Common/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/Common/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp -BC:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/BuildDirWin --check-stamp-file C:/Users/Halit/Desktop/Projects/Roketsan/SerialPortApp/BuildDirWin/Common/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp -BC:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/BuildDirWin --check-stamp-file C:/Users/Halit/Desktop/Projects/SerialPortApplication/SerialPortApp/BuildDirWin/Common/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -260,31 +260,38 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\Common\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\Common\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\src\WindowsSerialConnection.h" />
-    <ClCompile Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\src\WindowsSerialConnection.cpp" />
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include\SerialConfigReader.h" />
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include\SerialConfiguration.h" />
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include\SerialConnectionFactory.h" />
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include\EndianController.h" />
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\include\ISerialConnection.h" />
-    <ClCompile Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\src\SerialConfigReader.cpp" />
-    <ClCompile Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\src\SerialConnectionFactory.cpp" />
-    <ClCompile Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\Common\src\EndianController.cpp" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\SerialConfiguration\WindowsSerialConnection.h" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\SerialConfiguration\WindowsSerialConnection.cpp" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\SerialConfigReader.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\SerialConfiguration.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\SerialConnectionFactory.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\EndianController.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\ISerialConnection.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\CRCGenerator.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\BaseCommand.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\ByteStream.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\ICommand.h" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\SerialConfiguration\SerialConfigReader.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\SerialConfiguration\SerialConnectionFactory.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\EndianController.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\CRCGenerator.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\BaseCommand.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\ByteStream.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\ZERO_CHECK.vcxproj">
-      <Project>{1A98A245-7495-3747-A25A-F953023E8201}</Project>
+    <ProjectReference Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\ZERO_CHECK.vcxproj">
+      <Project>{1865600E-A636-3A95-BFE0-D87B67347640}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\Logger\Logger.vcxproj">
-      <Project>{1B6DC809-35A3-3D40-93A5-B54B760127C7}</Project>
+    <ProjectReference Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\Logger\Logger.vcxproj">
+      <Project>{D0F176E0-65BB-3FB9-BB69-A760A597C639}</Project>
       <Name>Logger</Name>
     </ProjectReference>
   </ItemGroup>

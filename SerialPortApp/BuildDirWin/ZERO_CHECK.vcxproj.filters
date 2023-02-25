@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Halit\Desktop\Projects\Roketsan\SerialPortApp\BuildDirWin\CMakeFiles\ecc7470c60deeda7b7a6b9da92dfbbad\generate.stamp.rule">
+    <CustomBuild Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\CMakeFiles\b64e91d3a5803097af7f3bba1270b72f\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{B4A69AAB-9EFA-3F44-A60A-699225624222}</UniqueIdentifier>
+      <UniqueIdentifier>{CE1BF435-F3FC-3C54-BDB2-108EBF71E63C}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
