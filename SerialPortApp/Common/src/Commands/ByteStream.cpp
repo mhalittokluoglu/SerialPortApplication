@@ -1,6 +1,7 @@
 #include "Commands/ByteStream.h"
 #include "EndianController.h"
 #include <cstring>
+#include <cstdio>
 
 ByteStream::ByteStream(uint8_t* buffer) :
     m_Buffer { buffer },
@@ -40,6 +41,7 @@ bool ByteStream::Write2Byte(const uint16_t &bufferToWrite)
             buffer--;
         }
     }
+    m_CurrentByteIndex += 2;
     return true;
 }
 
@@ -66,6 +68,7 @@ bool ByteStream::Write4Byte(const uint32_t &bufferToWrite)
             buffer--;
         }
     }
+    m_CurrentByteIndex += 4;
     return true;
 }
 
@@ -92,6 +95,7 @@ bool ByteStream::Write8Byte(const uint64_t &bufferToWrite)
             buffer--;
         }
     }
+    m_CurrentByteIndex += 8;
     return true;
 }
 
@@ -166,4 +170,9 @@ bool ByteStream::Read8Byte(uint64_t &bufferToRead)
     return true;
 }
 
-
+void ByteStream::Log()
+{
+    printf("0x");
+    for(int i = 0; i < m_CurrentByteIndex; i++)
+        printf("%02X", m_Buffer[i]);
+}

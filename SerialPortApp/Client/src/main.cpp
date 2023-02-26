@@ -6,7 +6,6 @@
 #include "EndianController.h"
 #include <cstring>
 #include <cstdio>
-#include "Commands/BaseCommand.h"
 
 int main()
 {
@@ -51,6 +50,7 @@ int main()
 
     while (true)
     {
+        /*
         char buffer[ByteStream::BUFFER_LENGTH] = { 0 };
         int len = sizeof(buffer);
         len = sizeof(buffer);
@@ -63,6 +63,7 @@ int main()
             printf("Command Length: %x\n", receivedCommand.m_CommandLength);
             printf("Command No: %x\n", receivedCommand.m_CommandNo);
         }
+        */
     }
 
 /*

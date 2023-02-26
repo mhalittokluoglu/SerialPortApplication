@@ -17,22 +17,36 @@ if(WINDOWS_SYSTEM)
     add_compile_definitions(WINDOWS_SYSTEM)
 endif()
 
-add_library(Common
-${COMMON_FILES}
-include/SerialConfiguration/SerialConfigReader.h
-include/SerialConfiguration/SerialConfiguration.h
-include/SerialConfiguration/SerialConnectionFactory.h
-include/EndianController.h
-include/SerialConfiguration/ISerialConnection.h
-include/CRCGenerator.h
-include/Commands/BaseCommand.h
-include/Commands/ByteStream.h
-include/Commands/ICommand.h
-src/SerialConfiguration/SerialConfigReader.cpp
-src/SerialConfiguration/SerialConnectionFactory.cpp
-src/EndianController.cpp
-src/CRCGenerator.cpp
-src/Commands/BaseCommand.cpp
-src/Commands/ByteStream.cpp
+
+add_library(Common ${COMMON_FILES}
+    include/Commands/Data/DataA.h
+    include/Commands/ByteStream.h
+    include/Commands/CommandHeader.h
+    include/Commands/CommandReceiverFacade.h
+    include/Commands/DataElements.h
+    include/Commands/FirstCommand.h
+    include/Commands/ICommand.h
+    include/Commands/ICommandProcessor.h
+    include/Commands/InvalidCommand.h
+    include/SerialConfiguration/ISerialConfigReader.h
+    include/SerialConfiguration/ISerialConnection.h
+    include/SerialConfiguration/SerialConfigReader.h
+    include/SerialConfiguration/SerialConfigReaderFactory.h
+    include/SerialConfiguration/SerialConfiguration.h
+    include/SerialConfiguration/SerialConnectionFactory.h
+    include/CRCGenerator.h
+    include/EndianController.h
+    src/Commands/Data/DataA.cpp
+    src/Commands/ByteStream.cpp
+    src/Commands/CommandHeader.cpp
+    src/Commands/DataElements.cpp
+    src/Commands/FirstCommand.cpp
+    src/Commands/InvalidCommand.cpp
+    src/SerialConfiguration/SerialConfigReader.cpp
+    src/SerialConfiguration/SerialConfigReaderFactory.cpp
+    src/SerialConfiguration/SerialConnectionFactory.cpp
+    src/CRCGenerator.cpp
+    src/EndianController.cpp
 )
 target_include_directories(Common PUBLIC include)
+add_compile_definitions(DEFAULT_CONFIG_READER)

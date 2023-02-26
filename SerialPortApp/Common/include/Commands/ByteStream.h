@@ -14,6 +14,8 @@ public:
     bool Read4Byte(uint32_t &bufferToRead);
     bool Read8Byte(uint64_t &bufferToRead);
     static const uint32_t BUFFER_LENGTH = 255;
+    inline void GetBuffer(void *buffer) { buffer = m_Buffer; }
+    void Log();
 
 private:
     uint8_t *m_Buffer;

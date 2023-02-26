@@ -1,8 +1,8 @@
 #ifndef _SERIALCONFIGREADER_H_
 #define _SERIALCONFIGREADER_H_
-#include "SerialConfiguration.h"
+#include "ISerialConfigReader.h"
 
-class SerialConfigReader
+class SerialConfigReader : public ISerialConfigReader
 {
 public:
     SerialConfigReader();

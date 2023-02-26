@@ -135,6 +135,7 @@ bool SerialConfigReader::ReadConfiguration(const char *configurationFilePath, Se
         Logger::LOG_FATAL(COMPONENT_COMMON, "Device Name is not given!");
 #endif
     }
+    configurationFile.close();
 
     return bResult;
 }
