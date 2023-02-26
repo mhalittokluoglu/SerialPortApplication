@@ -4,22 +4,37 @@
     <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\SerialConfiguration\WindowsSerialConnection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\Data\DataA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\ByteStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\CommandHeader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\DataElements.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\FirstCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\InvalidCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\SerialConfiguration\SerialConfigReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\SerialConfiguration\SerialConfigReaderFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\SerialConfiguration\SerialConnectionFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\EndianController.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\CRCGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\BaseCommand.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\ByteStream.cpp">
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\EndianController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -27,7 +42,43 @@
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\SerialConfiguration\WindowsSerialConnection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\Data\DataA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\ByteStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\CommandHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\CommandReceiverFacade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\DataElements.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\FirstCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\ICommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\ICommandProcessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\InvalidCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\ISerialConfigReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\ISerialConnection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\SerialConfigReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\SerialConfigReaderFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\SerialConfiguration.h">
@@ -36,22 +87,10 @@
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\SerialConnectionFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\EndianController.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\ISerialConnection.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\CRCGenerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\BaseCommand.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\ByteStream.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\ICommand.h">
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\EndianController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

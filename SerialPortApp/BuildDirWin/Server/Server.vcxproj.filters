@@ -1,14 +1,133 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\ServerComponent\ServerComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\CommandReceiver\CommandReader\CommandParser\FirstCommandParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\CommandReceiver\CommandReader\CommandReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\CommandReceiver\CommandReader\CommandReaderFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\CommandReceiver\CommandReceiverFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\CommandReceiver\ServerCommandReceiver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserCommandHandler\InvalidUserCommandHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserCommandHandler\UserCommandConverter\FirstCommandUserConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserCommandHandler\UserCommandConverter\InvalidUserCommandConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserCommandHandler\UserCommandHandlerFacade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserCommandHandler\UserFirstCommandHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserReceiver\UserReceiver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserReceiver\UserReceiverFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\ApplicationState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\IManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\ServerComponent\ServerComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\Specs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\CommandReceiver\CommandReader\CommandParser\FirstCommandParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\CommandReceiver\CommandReader\CommandParser\ICommandParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\CommandReceiver\CommandReader\CommandReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\CommandReceiver\CommandReader\CommandReaderFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\CommandReceiver\CommandReader\ICommandReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\CommandReceiver\CommandReceiverFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\CommandReceiver\ICommandReceiver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\CommandReceiver\ServerCommandReceiver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserCommandHandler\IUserCommandHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserCommandHandler\InvalidUserCommandHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserCommandHandler\UserCommandConverter\FirstCommandUserConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserCommandHandler\UserCommandConverter\IUserCommandConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserCommandHandler\UserCommandConverter\InvalidUserCommandConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserCommandHandler\UserCommandHandlerFacade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserCommandHandler\UserFirstCommandHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserInputType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserReceiver\IUserReceiver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserReceiver\UserReceiver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserReceiver\UserReceiverFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <CustomBuild Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{E0845C6A-C30D-39C3-92D9-5E931B5A5668}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{D6F9E2EB-A70F-3E74-8BEB-12CC3B69C13A}</UniqueIdentifier>
     </Filter>

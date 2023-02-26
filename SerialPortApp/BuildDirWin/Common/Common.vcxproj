@@ -89,11 +89,11 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;WINDOWS_SYSTEM;LOG_ENABLED;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;WINDOWS_SYSTEM;DEFAULT_CONFIG_READER;LOG_ENABLED;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;WINDOWS_SYSTEM;LOG_ENABLED;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;WINDOWS_SYSTEM;DEFAULT_CONFIG_READER;LOG_ENABLED;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -119,13 +119,13 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOWS_SYSTEM;LOG_ENABLED;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOWS_SYSTEM;DEFAULT_CONFIG_READER;LOG_ENABLED;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOWS_SYSTEM;LOG_ENABLED;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOWS_SYSTEM;DEFAULT_CONFIG_READER;LOG_ENABLED;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -151,13 +151,13 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOWS_SYSTEM;LOG_ENABLED;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOWS_SYSTEM;DEFAULT_CONFIG_READER;LOG_ENABLED;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOWS_SYSTEM;LOG_ENABLED;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOWS_SYSTEM;DEFAULT_CONFIG_READER;LOG_ENABLED;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -184,11 +184,11 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOWS_SYSTEM;LOG_ENABLED;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOWS_SYSTEM;DEFAULT_CONFIG_READER;LOG_ENABLED;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOWS_SYSTEM;LOG_ENABLED;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOWS_SYSTEM;DEFAULT_CONFIG_READER;LOG_ENABLED;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include;C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Logger\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -267,21 +267,34 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\SerialConfiguration\WindowsSerialConnection.h" />
     <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\SerialConfiguration\WindowsSerialConnection.cpp" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\Data\DataA.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\ByteStream.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\CommandHeader.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\CommandReceiverFacade.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\DataElements.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\FirstCommand.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\ICommand.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\ICommandProcessor.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\InvalidCommand.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\ISerialConfigReader.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\ISerialConnection.h" />
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\SerialConfigReader.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\SerialConfigReaderFactory.h" />
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\SerialConfiguration.h" />
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\SerialConnectionFactory.h" />
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\EndianController.h" />
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\SerialConfiguration\ISerialConnection.h" />
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\CRCGenerator.h" />
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\BaseCommand.h" />
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\ByteStream.h" />
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\Commands\ICommand.h" />
-    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\SerialConfiguration\SerialConfigReader.cpp" />
-    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\SerialConfiguration\SerialConnectionFactory.cpp" />
-    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\EndianController.cpp" />
-    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\CRCGenerator.cpp" />
-    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\BaseCommand.cpp" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\include\EndianController.h" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\Data\DataA.cpp" />
     <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\ByteStream.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\CommandHeader.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\DataElements.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\FirstCommand.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\Commands\InvalidCommand.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\SerialConfiguration\SerialConfigReader.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\SerialConfiguration\SerialConfigReaderFactory.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\SerialConfiguration\SerialConnectionFactory.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\CRCGenerator.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Common\src\EndianController.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\ZERO_CHECK.vcxproj">
