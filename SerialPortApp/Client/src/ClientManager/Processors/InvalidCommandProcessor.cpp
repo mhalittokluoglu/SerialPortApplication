@@ -12,6 +12,7 @@ void InvalidCommandProcessor::Process(ICommand *command)
     InvalidCommand *invalidCommand = static_cast<InvalidCommand*>(command);
     printf("  CommandType: Invalid Command\n");
     invalidCommand->Log();
+    printf("\n");
     ClientUtils::SendInvalidRequestCommand(EnumInvalidCause::INVALID_MESSAGE);
 }
 
