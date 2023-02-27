@@ -329,7 +329,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\UserReceiver\UserReceiverFactory.cpp" />
     <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\main.cpp" />
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\ApplicationState.h" />
-    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\IManager.h" />
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\ServerComponent\ServerComponent.h" />
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\Specs.h" />
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Server\src\UserManager\CommandReceiver\CommandReader\CommandParser\FirstCommandParser.h" />
