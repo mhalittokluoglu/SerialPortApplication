@@ -6,10 +6,9 @@ struct CommandHeader
 {
     CommandHeader();
     virtual ~CommandHeader() { }
-    virtual bool Serialize(ByteStream &byteStream, int &length);
-    virtual bool Deserialize(ByteStream &byteStream, const int &length);
+    virtual bool Serialize(ByteStream &byteStream, uint32_t &length);
+    virtual bool Deserialize(ByteStream &byteStream, const uint32_t &length);
 
-    inline uint16_t GetCRC() const { return m_Crc; }
     inline EnumCommandType GetCommandType();
     
     void Log();

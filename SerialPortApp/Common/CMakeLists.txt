@@ -28,6 +28,8 @@ add_library(Common ${COMMON_FILES}
     include/Commands/ICommand.h
     include/Commands/ICommandProcessor.h
     include/Commands/InvalidCommand.h
+    include/Commands/InvalidRequestCommand.h
+    include/Commands/SecondCommand.h
     include/SerialConfiguration/ISerialConfigReader.h
     include/SerialConfiguration/ISerialConnection.h
     include/SerialConfiguration/SerialConfigReader.h
@@ -36,12 +38,15 @@ add_library(Common ${COMMON_FILES}
     include/SerialConfiguration/SerialConnectionFactory.h
     include/CRCGenerator.h
     include/EndianController.h
+    include/IManager.h
     src/Commands/Data/DataA.cpp
     src/Commands/ByteStream.cpp
     src/Commands/CommandHeader.cpp
     src/Commands/DataElements.cpp
     src/Commands/FirstCommand.cpp
     src/Commands/InvalidCommand.cpp
+    src/Commands/InvalidRequestCommand.cpp
+    src/Commands/SecondCommand.cpp
     src/SerialConfiguration/SerialConfigReader.cpp
     src/SerialConfiguration/SerialConfigReaderFactory.cpp
     src/SerialConfiguration/SerialConnectionFactory.cpp

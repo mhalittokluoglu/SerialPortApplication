@@ -13,6 +13,7 @@ bool InvalidUserCommandConverter::Convert(ICommand *command, uint8_t *commandBuf
 
     if (invalidCommand == NULL)
         return false;
+
     
     size_t length = strlen(userBuffer);
     memcpy(&invalidCommand->m_Data, userBuffer, length);

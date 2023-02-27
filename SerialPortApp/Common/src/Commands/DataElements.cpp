@@ -18,6 +18,11 @@ EnumCommandType CommonSpecs::GetEnumTypeFromID(uint8_t commandID)
     case 0xA9:
         type = EnumCommandType::COMMAND_2;
         break;
+
+    case 0xA5:
+        type = EnumCommandType::INVALID_REQUEST_COMMAND;
+        break;
+        
     default:
         break;
     }

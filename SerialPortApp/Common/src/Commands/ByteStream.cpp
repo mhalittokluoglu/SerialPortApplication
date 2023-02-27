@@ -26,19 +26,14 @@ bool ByteStream::Write2Byte(const uint16_t &bufferToWrite)
     const uint8_t *buffer = (const uint8_t*)&bufferToWrite;
     if (EndianController::Instance()->IsBigEndian())
     {
-        for (uint8_t i = 0; i < 2; i++)
-        {
-            m_Buffer[m_CurrentByteIndex] = *buffer;
-            buffer++;
-        }
+        memcpy(&m_Buffer[m_CurrentByteIndex], buffer, 2);
     }
     else
     {
-        buffer += 2;
+        buffer += 1;
         for (uint8_t i = 0; i < 2; i++)
         {
-            m_Buffer[m_CurrentByteIndex] = *buffer;
-            buffer--;
+            memcpy(&m_Buffer[m_CurrentByteIndex + i], buffer - i, 1);
         }
     }
     m_CurrentByteIndex += 2;
@@ -53,19 +48,14 @@ bool ByteStream::Write4Byte(const uint32_t &bufferToWrite)
     const uint8_t *buffer = (const uint8_t*)&bufferToWrite;
     if (EndianController::Instance()->IsBigEndian())
     {
-        for (uint8_t i = 0; i < 4; i++)
-        {
-            m_Buffer[m_CurrentByteIndex] = *buffer;
-            buffer++;
-        }
+        memcpy(&m_Buffer[m_CurrentByteIndex], buffer, 4);
     }
     else
     {
-        buffer += 4;
+        buffer += 3;
         for (uint8_t i = 0; i < 4; i++)
         {
-            m_Buffer[m_CurrentByteIndex] = *buffer;
-            buffer--;
+            memcpy(&m_Buffer[m_CurrentByteIndex + i], buffer - i, 1);
         }
     }
     m_CurrentByteIndex += 4;
@@ -80,19 +70,14 @@ bool ByteStream::Write8Byte(const uint64_t &bufferToWrite)
     const uint8_t *buffer = (const uint8_t*)&bufferToWrite;
     if (EndianController::Instance()->IsBigEndian())
     {
-        for (uint8_t i = 0; i < 8; i++)
-        {
-            m_Buffer[m_CurrentByteIndex] = *buffer;
-            buffer++;
-        }
+        memcpy(&m_Buffer[m_CurrentByteIndex], buffer, 8);
     }
     else
     {
-        buffer += 8;
+        buffer += 7;
         for (uint8_t i = 0; i < 8; i++)
         {
-            m_Buffer[m_CurrentByteIndex] = *buffer;
-            buffer--;
+            memcpy(&m_Buffer[m_CurrentByteIndex + i], buffer - i, 1);
         }
     }
     m_CurrentByteIndex += 8;
@@ -122,7 +107,7 @@ bool ByteStream::Read2Byte(uint16_t &bufferToRead)
         uint8_t *buffer = (uint8_t *)&bufferToRead;
         for (uint8_t i = 0; i < 2; i++)
         {
-            memcpy(buffer+i, &m_Buffer[m_CurrentByteIndex + 2 - i], 1);
+            memcpy(buffer+i, &m_Buffer[m_CurrentByteIndex + 1 - i], 1);
         }
     }
     m_CurrentByteIndex += 2;
@@ -142,7 +127,7 @@ bool ByteStream::Read4Byte(uint32_t &bufferToRead)
         uint8_t *buffer = (uint8_t *)&bufferToRead;
         for (uint8_t i = 0; i < 4; i++)
         {
-            memcpy(buffer+i, &m_Buffer[m_CurrentByteIndex + 4 - i], 1);
+            memcpy(buffer+i, &m_Buffer[m_CurrentByteIndex + 3 - i], 1);
         }
     }
     m_CurrentByteIndex += 4;
@@ -163,7 +148,7 @@ bool ByteStream::Read8Byte(uint64_t &bufferToRead)
         uint8_t *buffer = (uint8_t *)&bufferToRead;
         for (uint8_t i = 0; i < 8; i++)
         {
-            memcpy(buffer+i, &m_Buffer[m_CurrentByteIndex + 8 - i], 1);
+            memcpy(buffer+i, &m_Buffer[m_CurrentByteIndex + 7 - i], 1);
         }
     }
     m_CurrentByteIndex += 8;
@@ -175,4 +160,5 @@ void ByteStream::Log()
     printf("0x");
     for(int i = 0; i < m_CurrentByteIndex; i++)
         printf("%02X", m_Buffer[i]);
+    printf("\n");
 }

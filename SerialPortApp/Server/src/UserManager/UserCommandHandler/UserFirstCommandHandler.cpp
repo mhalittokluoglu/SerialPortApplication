@@ -15,7 +15,7 @@ void UserFirstCommandHandler::Handle(ICommand *command, EnumUserInputType userIn
     FirstCommand *command1 = static_cast<FirstCommand*> (command);
     uint8_t buffer[ByteStream::BUFFER_LENGTH] = { 0 };
     ByteStream byteStream(buffer);
-    int length;
+    uint32_t length;
     uint16_t crc = command1->CalculateCRC();
     if (userInputType == CRC_ER)
     {
@@ -31,8 +31,8 @@ void UserFirstCommandHandler::Handle(ICommand *command, EnumUserInputType userIn
         {
             printf("Message Sent: ");
             byteStream.Log();
-            printf("\n");
             command1->Log();
+            printf("\n");
         }
     }
     else

@@ -14,5 +14,8 @@ private:
     uint32_t m_Length;
     uint32_t m_CurrentIndex;
 
+private:
+    void LogBufferToConsole(uint8_t *buffer);
+
 };
 #endif //_SERVERCOMMANDRECEIVER_H_

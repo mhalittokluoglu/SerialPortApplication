@@ -1,14 +1,14 @@
-#ifndef _FIRSTCOMMAND_H_
-#define _FIRSTCOMMAND_H_
+#ifndef _INVALIDREQUESTCOMMAND_H_
+#define _INVALIDREQUESTCOMMAND_H_
 #include "ICommand.h"
 #include "CommandHeader.h"
-#include "Data/DataA.h"
+#include "DataElements.h"
 
-class FirstCommand : public ICommand
+class InvalidRequestCommand : public ICommand
 {
 public:
-    FirstCommand();
-    ~FirstCommand();
+    InvalidRequestCommand();
+    ~InvalidRequestCommand();
     bool Serialize(ByteStream &byteStream, uint32_t &length);
     bool Deserialize(ByteStream &byteStream, const uint32_t &length);
     EnumCommandType GetType();
@@ -17,12 +17,11 @@ public:
     void Reset();
 
 public:
-    DataA m_A;
-    float m_B;
+    EnumInvalidCause m_InvalidCause;
     CommandHeader m_Header;
 
 private:
     bool SerializeWithoutCRC(ByteStream &byteStream, uint32_t &length);
 
 };
-#endif // _FIRSTCOMMAND_H_
+#endif // _INVALIDREQUESTCOMMAND_H_

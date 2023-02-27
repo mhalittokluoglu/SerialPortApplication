@@ -11,6 +11,7 @@
 #include "Commands/InvalidCommand.h"
 
 #include "SerialConfiguration/SerialConfigReaderFactory.h"
+#include <cstddef>
 
 UserCommandHandlerFacade::UserCommandHandlerFacade(ISerialConnection *connection)
 {
@@ -35,6 +36,9 @@ void UserCommandHandlerFacade::Handle(char *userInputBuffer, uint8_t *readedBuff
         commandType = CommonSpecs::GetEnumTypeFromID(commandID);
     }
     
+    if (m_Commands[commandType] != NULL)
+        m_Commands[commandType]->Reset();
+
     if (m_UserCommandConverters[commandType]->Convert(m_Commands[commandType], readedBuffer, userInputBuffer))
         m_UserCommandHandlers[commandType]->Handle(m_Commands[commandType], inputType);
 }

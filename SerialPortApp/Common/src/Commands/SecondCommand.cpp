@@ -1,20 +1,20 @@
-#include "Commands/FirstCommand.h"
+#include "Commands/SecondCommand.h"
 #include "CRCGenerator.h"
 #include <cstring>
 #include <cstdio>
 
-FirstCommand::FirstCommand() : 
+SecondCommand::SecondCommand() : 
         m_B{0.0f}
 {
     m_Header.m_Heading = 0xCA;
-    m_Header.m_CommandNo = 0xA8;
+    m_Header.m_CommandNo = 0xA9;
     m_Header.m_CommandLength = 9;
-    m_Header.m_CommandType = COMMAND_1;
+    m_Header.m_CommandType = COMMAND_2;
 }
 
-FirstCommand::~FirstCommand() { }
+SecondCommand::~SecondCommand() { }
 
-bool FirstCommand::Serialize(ByteStream &byteStream, uint32_t &length)
+bool SecondCommand::Serialize(ByteStream &byteStream, uint32_t &length)
 {
     length = 0;
     if (!SerializeWithoutCRC(byteStream, length))
@@ -27,7 +27,7 @@ bool FirstCommand::Serialize(ByteStream &byteStream, uint32_t &length)
     return true;
 }
 
-bool FirstCommand::Deserialize(ByteStream &byteStream, const uint32_t &length)
+bool SecondCommand::Deserialize(ByteStream &byteStream, const uint32_t &length)
 {
     if (!m_Header.Deserialize(byteStream, length))
         return false;
@@ -36,7 +36,7 @@ bool FirstCommand::Deserialize(ByteStream &byteStream, const uint32_t &length)
         return false;
 
     uint8_t dataA;
-    if (!byteStream.ReadByte(dataA))
+    if (!byteStream.ReadByte(dataA));
         return false;
     m_A.Deserialize(dataA);
 
@@ -54,13 +54,13 @@ bool FirstCommand::Deserialize(ByteStream &byteStream, const uint32_t &length)
 }
 
 
-EnumCommandType FirstCommand::GetType()
+EnumCommandType SecondCommand::GetType()
 {
     return m_Header.m_CommandType;
 }
 
 
-uint16_t FirstCommand::CalculateCRC()
+uint16_t SecondCommand::CalculateCRC()
 {
     uint8_t buffer [ByteStream::BUFFER_LENGTH] = { 0 };
     ByteStream byteStream(buffer);
@@ -72,7 +72,7 @@ uint16_t FirstCommand::CalculateCRC()
 
 }
 
-bool FirstCommand::SerializeWithoutCRC(ByteStream &byteStream, uint32_t &length)
+bool SecondCommand::SerializeWithoutCRC(ByteStream &byteStream, uint32_t &length)
 {
     if (!m_Header.Serialize(byteStream, length))
         return false;
@@ -91,7 +91,7 @@ bool FirstCommand::SerializeWithoutCRC(ByteStream &byteStream, uint32_t &length)
     return true;
 }
 
-void FirstCommand::Log()
+void SecondCommand::Log()
 {
     m_Header.Log();
     printf("  State A:\n");
@@ -106,13 +106,13 @@ void FirstCommand::Log()
     printf("  CRC: 0x%04X\n", m_Header.m_Crc);
 }
 
-void FirstCommand::Reset()
+void SecondCommand::Reset()
 {
     m_Header.Reset();
     m_Header.m_Heading = 0xCA;
-    m_Header.m_CommandNo = 0xA8;
+    m_Header.m_CommandNo = 0xA9;
     m_Header.m_CommandLength = 9;
-    m_Header.m_CommandType = COMMAND_1;
+    m_Header.m_CommandType = COMMAND_2;
     m_A.Reset();
     m_B = 0;
 }

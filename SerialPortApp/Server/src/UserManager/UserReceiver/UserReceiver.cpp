@@ -9,6 +9,7 @@ UserReceiver::~UserReceiver() { }
 
 EnumUserInputType UserReceiver::GetUserInput(char *userInput)
 {
+    printf("Input > ");
     EnumUserInputType userInputType = INVALID;
     char upperCaseBuffer[CommonSpecs::MAX_USER_INPUT] = { 0 };
     std::cin.getline(userInput, CommonSpecs::MAX_USER_INPUT);

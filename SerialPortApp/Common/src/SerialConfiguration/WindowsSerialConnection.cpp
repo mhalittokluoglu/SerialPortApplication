@@ -92,7 +92,10 @@ bool WindowsSerialConnection::Receive(char *buffer, int &len)
     if(ReadFile(m_SerialHandle, buffer, len, &lengthOfReadedBytes, NULL))
     {
         if (lengthOfReadedBytes > 0)
+        {
             bResult = true;
+            len = lengthOfReadedBytes;
+        }
     }
     return bResult;
 }

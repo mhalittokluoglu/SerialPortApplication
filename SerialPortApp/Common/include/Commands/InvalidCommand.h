@@ -8,14 +8,14 @@ class InvalidCommand : public ICommand
 public:
     InvalidCommand();
     ~InvalidCommand();
-    bool Serialize(ByteStream &byteStream, int &length);
-    bool Deserialize(ByteStream &byteStream, const int &length);
-    CommandHeader* GetHeader();
+    bool Serialize(ByteStream &byteStream, uint32_t &length);
+    bool Deserialize(ByteStream &byteStream, const uint32_t &length);
+    EnumCommandType GetType();
     void Log();
     void Reset();
 
 public:
-    CommandHeader m_Header;
+    EnumCommandType m_CommandType;
     char m_Data[CommonSpecs::MAX_USER_INPUT];
 };
 

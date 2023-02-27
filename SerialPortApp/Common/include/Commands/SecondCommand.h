@@ -1,14 +1,14 @@
-#ifndef _FIRSTCOMMAND_H_
-#define _FIRSTCOMMAND_H_
+#ifndef _SECONDCOMMAND_H_
+#define _SECONDCOMMAND_H_
 #include "ICommand.h"
 #include "CommandHeader.h"
 #include "Data/DataA.h"
 
-class FirstCommand : public ICommand
+class SecondCommand : public ICommand
 {
 public:
-    FirstCommand();
-    ~FirstCommand();
+    SecondCommand();
+    ~SecondCommand();
     bool Serialize(ByteStream &byteStream, uint32_t &length);
     bool Deserialize(ByteStream &byteStream, const uint32_t &length);
     EnumCommandType GetType();
@@ -25,4 +25,4 @@ private:
     bool SerializeWithoutCRC(ByteStream &byteStream, uint32_t &length);
 
 };
-#endif // _FIRSTCOMMAND_H_
+#endif // _SECONDCOMMAND_H_

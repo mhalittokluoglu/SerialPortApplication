@@ -2,13 +2,14 @@
 #define _ICOMMAND_H_
 #include <inttypes.h>
 #include "CommandHeader.h"
+#include "DataElements.h"
 class ICommand
 {
 public:
     ~ICommand() { }
-    virtual bool Serialize(ByteStream &byteStream, int &length) = 0;
-    virtual bool Deserialize(ByteStream &byteStream, const int &length) = 0;
-    virtual CommandHeader* GetHeader() = 0;
+    virtual bool Serialize(ByteStream &byteStream, uint32_t &length) = 0;
+    virtual bool Deserialize(ByteStream &byteStream, const uint32_t &length) = 0;
+    virtual EnumCommandType GetType() = 0;
     virtual void Log() = 0;
     virtual void Reset() = 0;
 };

@@ -5,6 +5,7 @@ enum EnumCommandType
 {
     COMMAND_1,
     COMMAND_2,
+    INVALID_REQUEST_COMMAND,
     INVALID_COMMAND,
     MAX_COMMAND
 };
@@ -29,6 +30,13 @@ enum EnumLoadState
     A_LOADED = 1,
     B_LOADED = 2,
     C_LOADED = 3
+};
+
+enum EnumInvalidCause
+{
+    NO_INVALID_CAUSE = 0,
+    MESSAGE_WITH_CRC_ERROR = 1,
+    INVALID_MESSAGE = 2
 };
 
 struct CommonSpecs

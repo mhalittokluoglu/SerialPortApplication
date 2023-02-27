@@ -7,7 +7,7 @@ CommandHeader::CommandHeader()
 }
 
 
-bool CommandHeader::Serialize(ByteStream &byteStream, int &length)
+bool CommandHeader::Serialize(ByteStream &byteStream, uint32_t &length)
 {
     if (!byteStream.WriteByte(m_Heading))
         return false;
@@ -21,7 +21,7 @@ bool CommandHeader::Serialize(ByteStream &byteStream, int &length)
     return true;
 }
 
-bool CommandHeader::Deserialize(ByteStream &byteStream, const int &length)
+bool CommandHeader::Deserialize(ByteStream &byteStream, const uint32_t &length)
 {
     if (length < 3)
         return 0;
