@@ -1,14 +1,19 @@
 #ifndef _ENDIANCONTROLLER_H_
 #define _ENDIANCONTROLLER_H_
-class EndianController
+
+namespace Common
 {
-public:
-    bool IsBigEndian();
-    static EndianController* Instance();
-    void ConvertFromLittleToBigEndian(char *inputBuffer, char *outputBuffer, int length);
-private:
-    static EndianController *s_Instance;
-    bool m_IsBigEndian;
-    EndianController();
-};
+    class EndianController
+    {
+    public:
+        bool IsBigEndian();
+        static EndianController *Instance();
+
+    private:
+        static EndianController *s_Instance;
+        bool m_IsBigEndian;
+        EndianController();
+    };
+} // Common
+
 #endif // _ENDIANCONTROLLER_H_

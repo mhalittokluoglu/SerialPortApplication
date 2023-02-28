@@ -1,6 +1,8 @@
 #include "Commands/Data/DataA.h"
 #include <cstring>
 
+using namespace Common;
+
 DataA::DataA()
 {
     Reset();

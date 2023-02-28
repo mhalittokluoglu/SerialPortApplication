@@ -9,6 +9,8 @@
 #include <errno.h>
 #include "termios.h"
 
+using namespace Common;
+
 int TermiousMap[] = {
                         B50,
                         B75,

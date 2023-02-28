@@ -2,21 +2,21 @@
 #define _USERCOMMANDHANDLERFACADE_H_
 #include "IUserCommandHandler.h"
 #include "UserCommandConverter/IUserCommandConverter.h"
-#include "Commands/DataElements.h"
 #include "UserManager/UserInputType.h"
-#include "SerialConfiguration/ISerialConnection.h"
+#include "IConnection.h"
+#include "Constants.h"
 
 class UserCommandHandlerFacade
 {
 public:
-    UserCommandHandlerFacade(ISerialConnection *connection);
+    UserCommandHandlerFacade(Common::IConnection *connection);
     ~UserCommandHandlerFacade();
     void Handle(char *userInputBuffer, uint8_t *readedBuffer, EnumUserInputType inputType);
 
 private:
-    IUserCommandHandler *m_UserCommandHandlers[CommonSpecs::MAX_COMMAND_TYPE];
-    IUserCommandConverter *m_UserCommandConverters[CommonSpecs::MAX_COMMAND_TYPE];
-    ICommand *m_Commands[CommonSpecs::MAX_COMMAND_TYPE];
+    IUserCommandHandler *m_UserCommandHandlers[Common::Constants::MAX_COMMAND_TYPE];
+    IUserCommandConverter *m_UserCommandConverters[Common::Constants::MAX_COMMAND_TYPE];
+    Common::ICommand *m_Commands[Common::Constants::MAX_COMMAND_TYPE];
     
 };
 #endif // _USERCOMMANDHANDLERFACADE_H_

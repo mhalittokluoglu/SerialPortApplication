@@ -2,12 +2,13 @@
 #define _SERIALCONFIGREADERFACTORY_H_
 #include "ISerialConfigReader.h"
 
-
-class SerialConfigReaderFactory
+namespace Common
 {
-public:
-    static ISerialConfigReader* CreateSerialConfigReader();
-};
-
+    class SerialConfigReaderFactory
+    {
+    public:
+        static ISerialConfigReader *CreateSerialConfigReader();
+    };
+} // Common
 
 #endif // _SERIALCONFIGREADERFACTORY_H_

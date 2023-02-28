@@ -1,5 +1,7 @@
 #include "WindowsSerialConnection.h"
 
+using namespace Common;
+
 static const int BaudRateMap[] = {
     50,
     75,

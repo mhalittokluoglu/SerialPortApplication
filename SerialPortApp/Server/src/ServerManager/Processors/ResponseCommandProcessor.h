@@ -3,15 +3,15 @@
 #include "Commands/ICommandProcessor.h"
 #include "Commands/Data/DataA.h"
 
-class ResponseCommandProcessor : public ICommandProcessor
+class ResponseCommandProcessor : public Common::ICommandProcessor
 {
 public:
     ResponseCommandProcessor();
     ~ResponseCommandProcessor();
-    void Process(ICommand *command);
+    void Process(Common::ICommand *command);
 
 private:
-    void LogCommandType(EnumCommandType commandType);
+    void LogCommandType(Common::EnumCommandType commandType);
 };
 
 #endif // _RESPONSECOMMANDPROCESSOR_H_

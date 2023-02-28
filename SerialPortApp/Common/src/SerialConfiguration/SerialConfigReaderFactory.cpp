@@ -3,6 +3,8 @@
 #include "SerialConfiguration/SerialConfigReader.h"
 #endif // DEFAULT_CONFIG_READER
 
+using namespace Common;
+
 ISerialConfigReader* SerialConfigReaderFactory::CreateSerialConfigReader()
 {
 #ifdef DEFAULT_CONFIG_READER

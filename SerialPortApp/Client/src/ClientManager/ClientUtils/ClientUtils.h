@@ -1,18 +1,18 @@
 #ifndef _CLIENTUTILS_H_
 #define _CLIENTUTILS_H_
 #include "Commands/DataElements.h"
-#include "SerialConfiguration/ISerialConnection.h"
-#include "Commands/ICommand.h"
+#include "IConnection.h"
+#include "Commands/ISerializableCommand.h"
 
 class ClientUtils
 {
 public:
-    static void Initialize(ISerialConnection *serialConnection);
-    static bool SendInvalidRequestCommand(EnumInvalidCause cause);
-    static bool SendCommand(ICommand *command);
+    static void Initialize(Common::IConnection *connection);
+    static bool SendInvalidRequestCommand(Common::EnumInvalidCause cause);
+    static bool SendCommand(Common::ISerializableCommand *command);
 
 private:
-    static ISerialConnection *s_SerialConnection;
+    static Common::IConnection *s_Connection;
 
 };
 #endif // _CLIENTUTILS_H_

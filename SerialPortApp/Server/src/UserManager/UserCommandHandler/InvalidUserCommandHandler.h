@@ -1,16 +1,16 @@
 #ifndef _INVALIDUSERCOMMANDHANDLER_H_
 #define _INVALIDUSERCOMMANDHANDLER_H_
 #include "IUserCommandHandler.h"
-#include "SerialConfiguration/ISerialConnection.h"
+#include "IConnection.h"
 
 class InvalidUserCommandHandler : public IUserCommandHandler
 {
 public:
-    InvalidUserCommandHandler(ISerialConnection *connection);
+    InvalidUserCommandHandler(Common::IConnection *connection);
     ~InvalidUserCommandHandler();
-    void Handle(ICommand *command, EnumUserInputType userInputType);
+    void Handle(Common::ICommand *command, EnumUserInputType userInputType);
 
 private:
-    ISerialConnection *m_SerialConnection;
+    Common::IConnection *m_Connection;
 };
 #endif // _INVALIDUSERCOMMANDHANDLER_H_

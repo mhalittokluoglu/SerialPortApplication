@@ -7,6 +7,8 @@
 #include <fstream>
 #include <cstring>
 
+using namespace Common;
+
 SerialConfigReader::SerialConfigReader() { }
 
 SerialConfigReader::~SerialConfigReader() { }

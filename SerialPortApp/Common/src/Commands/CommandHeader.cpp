@@ -1,6 +1,8 @@
 #include "Commands/CommandHeader.h"
 #include <cstdio>
 
+using namespace Common;
+
 CommandHeader::CommandHeader()
 {
     Reset();

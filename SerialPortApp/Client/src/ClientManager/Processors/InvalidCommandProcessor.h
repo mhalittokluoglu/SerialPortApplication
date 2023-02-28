@@ -2,12 +2,12 @@
 #define _INVALIDCOMMANDPROCESSOR_H_
 #include "Commands/ICommandProcessor.h"
 
-class InvalidCommandProcessor : public ICommandProcessor
+class InvalidCommandProcessor : public Common::ICommandProcessor
 {
 public:
     InvalidCommandProcessor();
     ~InvalidCommandProcessor();
-    void Process(ICommand *command);
+    void Process(Common::ICommand *command);
 };
 
 #endif // _INVALIDCOMMANDPROCESSOR_H_

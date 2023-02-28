@@ -7,7 +7,7 @@ class InvalidUserCommandConverter : public IUserCommandConverter
 public:
     InvalidUserCommandConverter();
     ~InvalidUserCommandConverter();
-    virtual bool Convert(ICommand *command, uint8_t *commandBuffer, char* userBuffer);
+    virtual bool Convert(Common::ICommand *command, uint8_t *commandBuffer, char* userBuffer);
 
 };
 #endif // _INVALIDUSERCOMMANDCONVERTER_H_

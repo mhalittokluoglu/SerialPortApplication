@@ -7,7 +7,7 @@ FirstCommandUserConverter::FirstCommandUserConverter() { }
 
 FirstCommandUserConverter::~FirstCommandUserConverter() { }
 
-bool FirstCommandUserConverter::Convert(ICommand *command, uint8_t *commandBuffer, char* userBuffer)
+bool FirstCommandUserConverter::Convert(Common::ICommand *command, uint8_t *commandBuffer, char* userBuffer)
 {
     FirstCommand *command1 = static_cast<FirstCommand*>(command);
     if (command1 == NULL)

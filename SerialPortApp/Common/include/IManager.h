@@ -1,9 +1,13 @@
 #ifndef _IMANAGER_H_
 #define _IMANAGER_H_
-class IManager
+namespace Common
 {
-public:
-    virtual ~IManager() { }
-    virtual void Run() = 0;
-};
+    class IManager
+    {
+    public:
+        virtual ~IManager() {}
+        virtual void Run() = 0;
+    };
+} // Common
+
 #endif // _IMANAGER_H_

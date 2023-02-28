@@ -6,6 +6,6 @@ class IUserCommandHandler
 {
 public:
     virtual ~IUserCommandHandler() { }
-    virtual void Handle(ICommand *command, EnumUserInputType userInputType) = 0;
+    virtual void Handle(Common::ICommand *command, EnumUserInputType userInputType) = 0;
 };
 #endif // _IUSERCOMMANDHANDLER_H_

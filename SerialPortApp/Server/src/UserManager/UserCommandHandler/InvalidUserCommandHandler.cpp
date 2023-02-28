@@ -1,24 +1,25 @@
 #include "InvalidUserCommandHandler.h"
 #include "Commands/InvalidCommand.h"
+#include "Constants.h"
 #include <cstdio>
 #ifdef LOG_ENABLED
 #include "Logger.h"
 #endif // LOG_ENABLED
 
-InvalidUserCommandHandler::InvalidUserCommandHandler(ISerialConnection *connection) :
-    m_SerialConnection { connection } { }
+InvalidUserCommandHandler::InvalidUserCommandHandler(Common::IConnection *connection) :
+    m_Connection { connection } { }
 
 InvalidUserCommandHandler::~InvalidUserCommandHandler() { }
 
-void InvalidUserCommandHandler::Handle(ICommand *command, EnumUserInputType userInputType)
+void InvalidUserCommandHandler::Handle(Common::ICommand *command, EnumUserInputType userInputType)
 {
     InvalidCommand *invalidCommand = static_cast<InvalidCommand*> (command);
-    uint8_t buffer[ByteStream::BUFFER_LENGTH] = { 0 };
-    ByteStream byteStream(buffer);
+    uint8_t buffer[Common::Constants::MAX_COMMAND_LENGTH] = { 0 };
+    Common::ByteStream byteStream(buffer);
     uint32_t length;
     if (invalidCommand->Serialize(byteStream, length))
     {
-        if (m_SerialConnection->Send((char*)buffer, length))
+        if (m_Connection->Send((char*)buffer, length))
         {
             printf("Message Sent: ");
             byteStream.Log();

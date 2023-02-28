@@ -1,10 +1,11 @@
 #include "UserManager.h"
 #include "CommandReceiver/CommandReceiverFactory.h"
 #include "UserReceiver/UserReceiverFactory.h"
-#include "Commands/ByteStream.h"
-#include "Commands/DataElements.h"
+#include "Constants.h"
 
-UserManager::UserManager(ApplicationState *state, ISerialConnection *connection) : m_State{state}
+using namespace Common;
+
+UserManager::UserManager(ApplicationState *state, IConnection *connection) : m_State{state}
 {
     m_CommandReceiver = CommandReceiverFactory::CreateCommandReceiver();
     m_UserReceiver = UserReceiverFactory::CreateUserReceiver();
@@ -17,10 +18,10 @@ void UserManager::Run()
 {
     if (*m_State != NO_MESSAGE_TO_SEND)
     {
-        uint8_t commandBuffer[ByteStream::BUFFER_LENGTH];
+        uint8_t commandBuffer[Constants::MAX_COMMAND_LENGTH];
         if (m_CommandReceiver->Read(commandBuffer))
         {
-            char userInput[CommonSpecs::MAX_USER_INPUT] = {0};
+            char userInput[Constants::MAX_COMMAND_LENGTH] = {0};
             EnumUserInputType userInputType = m_UserReceiver->GetUserInput(userInput);
             m_UserCommandHandlerFacade->Handle(userInput, commandBuffer, userInputType);
         }

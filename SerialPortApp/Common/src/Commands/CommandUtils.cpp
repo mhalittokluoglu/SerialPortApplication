@@ -1,12 +1,14 @@
-#include "Commands/DataElements.h"
+#include "Commands/CommandUtils.h"
 
-const uint8_t CommandMap[MAX_COMMAND] = {
+using namespace Common;
+
+const uint8_t Utils::CommandMap[MAX_COMMAND] = {
     0xA8,
     0xA9,
     0xA5
 };
 
-EnumCommandType CommonSpecs::GetEnumTypeFromID(uint8_t commandID)
+EnumCommandType Utils::GetEnumTypeFromID(uint8_t commandID)
 {
     EnumCommandType type = INVALID_COMMAND;
     switch (commandID)

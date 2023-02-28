@@ -5,22 +5,22 @@ ResponseCommandProcessor::ResponseCommandProcessor() { }
 
 ResponseCommandProcessor::~ResponseCommandProcessor() { }
 
-void ResponseCommandProcessor::Process(ICommand *command)
+void ResponseCommandProcessor::Process(Common::ICommand *command)
 {
-    EnumCommandType commandType = command->GetType();
+    Common::EnumCommandType commandType = command->GetType();
     LogCommandType(commandType);
     command->Log();
     printf("_______________________________________________\n");
 }
 
-void ResponseCommandProcessor::LogCommandType(EnumCommandType commandType)
+void ResponseCommandProcessor::LogCommandType(Common::EnumCommandType commandType)
 {
     switch (commandType)
     {
-    case COMMAND_2:
+    case Common::COMMAND_2:
         printf("  Type: SecondCommand\n");
         break;
-    case INVALID_REQUEST_COMMAND:
+    case Common::INVALID_REQUEST_COMMAND:
         printf("  Type: InvalidRequestCommand\n");
         break;
     

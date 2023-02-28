@@ -1,5 +1,5 @@
 #include "UserCommandHandlerFacade.h"
-#include "Commands/DataElements.h"
+#include "Commands/CommandUtils.h"
 
 #include "UserCommandConverter/FirstCommandUserConverter.h"
 #include "UserCommandConverter/InvalidUserCommandConverter.h"
@@ -10,30 +10,29 @@
 #include "Commands/FirstCommand.h"
 #include "Commands/InvalidCommand.h"
 
-#include "SerialConfiguration/SerialConfigReaderFactory.h"
 #include <cstddef>
 
-UserCommandHandlerFacade::UserCommandHandlerFacade(ISerialConnection *connection)
+UserCommandHandlerFacade::UserCommandHandlerFacade(Common::IConnection *connection)
 {
-    m_UserCommandConverters[COMMAND_1]          = new FirstCommandUserConverter();
-    m_UserCommandConverters[INVALID_COMMAND]    = new InvalidUserCommandConverter();
+    m_UserCommandConverters[Common::COMMAND_1]          = new FirstCommandUserConverter();
+    m_UserCommandConverters[Common::INVALID_COMMAND]    = new InvalidUserCommandConverter();
 
-    m_UserCommandHandlers[COMMAND_1]            = new UserFirstCommandHandler(connection);
-    m_UserCommandHandlers[INVALID_COMMAND]      = new InvalidUserCommandHandler(connection);
+    m_UserCommandHandlers[Common::COMMAND_1]            = new UserFirstCommandHandler(connection);
+    m_UserCommandHandlers[Common::INVALID_COMMAND]      = new InvalidUserCommandHandler(connection);
 
-    m_Commands[COMMAND_1]                       = new FirstCommand();
-    m_Commands[INVALID_COMMAND]                 = new InvalidCommand();
+    m_Commands[Common::COMMAND_1]                       = new FirstCommand();
+    m_Commands[Common::INVALID_COMMAND]                 = new InvalidCommand();
 }
 
 UserCommandHandlerFacade::~UserCommandHandlerFacade() { }
 
 void UserCommandHandlerFacade::Handle(char *userInputBuffer, uint8_t *readedBuffer, EnumUserInputType inputType)
 {
-    EnumCommandType commandType = INVALID_COMMAND;
+    Common::EnumCommandType commandType = Common::INVALID_COMMAND;
     if (inputType != INVALID)
     {
         uint8_t commandID = readedBuffer[2];
-        commandType = CommonSpecs::GetEnumTypeFromID(commandID);
+        commandType = Common::Utils::GetEnumTypeFromID(commandID);
     }
     
     if (m_Commands[commandType] != NULL)

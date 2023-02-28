@@ -1,8 +1,8 @@
 #ifndef _SERVERCOMMANDRECEIVER_H_
 #define _SERVERCOMMANDRECEIVER_H_
 #include "ICommandReceiver.h"
-#include "Specs.h"
-#include "Commands/ByteStream.h"
+#include "Constants.h"
+#include "ServerConstants.h"
 class ServerCommandReceiver : public ICommandReceiver
 {
 public:
@@ -10,7 +10,7 @@ public:
     bool Read(uint8_t *buffer);
 
 private:
-    uint8_t m_Commands[Specs::MAX_MESSAGE_IN_FILE][ByteStream::BUFFER_LENGTH];
+    uint8_t m_Commands[ServerConstants::MAX_MESSAGE_IN_FILE][Common::Constants::MAX_COMMAND_LENGTH];
     uint32_t m_Length;
     uint32_t m_CurrentIndex;
 

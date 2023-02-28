@@ -8,9 +8,9 @@
 
 ClientComponent::ClientComponent()
 {
-    ISerialConnection* serialConnection = SerialConnectionFactory::CreateSerialConnection();
-    SerialConfiguration serialConfiguration;
-    SerialConfigReader reader;
+    Common::ISerialConnection* serialConnection = Common::SerialConnectionFactory::CreateSerialConnection();
+    Common::SerialConfiguration serialConfiguration;
+    Common::SerialConfigReader reader;
     if (!reader.ReadConfiguration("Configuration/PortConfigurationClient.csv", serialConfiguration))
     {
 #ifdef LOG_ENABLED

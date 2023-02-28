@@ -5,6 +5,6 @@ class IUserCommandConverter
 {
 public:
     ~IUserCommandConverter() { }
-    virtual bool Convert(ICommand *command, uint8_t *commandBuffer, char* userBuffer) = 0;
+    virtual bool Convert(Common::ICommand *command, uint8_t *commandBuffer, char* userBuffer) = 0;
 };
 #endif // _IUSERCOMMANDCONVERTER_H_

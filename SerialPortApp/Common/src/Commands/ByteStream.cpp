@@ -1,7 +1,10 @@
 #include "Commands/ByteStream.h"
 #include "EndianController.h"
+#include "Constants.h"
 #include <cstring>
 #include <cstdio>
+
+using namespace Common;
 
 ByteStream::ByteStream(uint8_t* buffer) :
     m_Buffer { buffer },
@@ -11,7 +14,7 @@ ByteStream::ByteStream(uint8_t* buffer) :
 
 bool ByteStream::WriteByte(const uint8_t &bufferToWrite)
 {
-    if (m_CurrentByteIndex > BUFFER_LENGTH - 1)
+    if (m_CurrentByteIndex > Constants::MAX_COMMAND_LENGTH - 1)
         return false;
     m_Buffer[m_CurrentByteIndex] = bufferToWrite;
     m_CurrentByteIndex++;
@@ -20,7 +23,7 @@ bool ByteStream::WriteByte(const uint8_t &bufferToWrite)
 
 bool ByteStream::Write2Byte(const uint16_t &bufferToWrite)
 {
-    if (m_CurrentByteIndex > BUFFER_LENGTH - 2)
+    if (m_CurrentByteIndex > Constants::MAX_COMMAND_LENGTH - 2)
         return false;
 
     const uint8_t *buffer = (const uint8_t*)&bufferToWrite;
@@ -42,7 +45,7 @@ bool ByteStream::Write2Byte(const uint16_t &bufferToWrite)
 
 bool ByteStream::Write4Byte(const uint32_t &bufferToWrite)
 {
-    if (m_CurrentByteIndex > BUFFER_LENGTH - 4)
+    if (m_CurrentByteIndex > Constants::MAX_COMMAND_LENGTH - 4)
         return false;
 
     const uint8_t *buffer = (const uint8_t*)&bufferToWrite;
@@ -64,7 +67,7 @@ bool ByteStream::Write4Byte(const uint32_t &bufferToWrite)
 
 bool ByteStream::Write8Byte(const uint64_t &bufferToWrite)
 {
-    if (m_CurrentByteIndex > BUFFER_LENGTH - 8)
+    if (m_CurrentByteIndex > Constants::MAX_COMMAND_LENGTH - 8)
         return false;
 
     const uint8_t *buffer = (const uint8_t*)&bufferToWrite;

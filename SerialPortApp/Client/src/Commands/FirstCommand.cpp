@@ -1,5 +1,6 @@
-#include "Commands/FirstCommand.h"
+#include "FirstCommand.h"
 #include "CRCGenerator.h"
+#include "Constants.h"
 #include <cstring>
 #include <cstdio>
 
@@ -9,25 +10,12 @@ FirstCommand::FirstCommand() :
     m_Header.m_Heading = 0xCA;
     m_Header.m_CommandNo = 0xA8;
     m_Header.m_CommandLength = 9;
-    m_Header.m_CommandType = COMMAND_1;
+    m_Header.m_CommandType = Common::COMMAND_1;
 }
 
 FirstCommand::~FirstCommand() { }
 
-bool FirstCommand::Serialize(ByteStream &byteStream, uint32_t &length)
-{
-    length = 0;
-    if (!SerializeWithoutCRC(byteStream, length))
-        return false;
-
-    if (!byteStream.Write2Byte(m_Header.m_Crc))
-        return false;
-    length += 2;
-
-    return true;
-}
-
-bool FirstCommand::Deserialize(ByteStream &byteStream, const uint32_t &length)
+bool FirstCommand::Deserialize(Common::ByteStream &byteStream, const uint32_t &length)
 {
     if (!m_Header.Deserialize(byteStream, length))
         return false;
@@ -53,26 +41,24 @@ bool FirstCommand::Deserialize(ByteStream &byteStream, const uint32_t &length)
     return true;
 }
 
-
-EnumCommandType FirstCommand::GetType()
+Common::EnumCommandType FirstCommand::GetType()
 {
     return m_Header.m_CommandType;
 }
 
-
 uint16_t FirstCommand::CalculateCRC()
 {
-    uint8_t buffer [ByteStream::BUFFER_LENGTH] = { 0 };
-    ByteStream byteStream(buffer);
+    uint8_t buffer [Common::Constants::MAX_COMMAND_LENGTH] = { 0 };
+    Common::ByteStream byteStream(buffer);
     uint32_t length = 0;
     SerializeWithoutCRC(byteStream, length);
     
-    uint16_t crc = CRCGenerator::CalculateCRC16(buffer, m_Header.m_CommandLength + 1);
+    uint16_t crc = Common::CRCGenerator::CalculateCRC16(buffer, m_Header.m_CommandLength + 1);
     return crc;
 
 }
 
-bool FirstCommand::SerializeWithoutCRC(ByteStream &byteStream, uint32_t &length)
+bool FirstCommand::SerializeWithoutCRC(Common::ByteStream &byteStream, uint32_t &length)
 {
     if (!m_Header.Serialize(byteStream, length))
         return false;
@@ -112,7 +98,7 @@ void FirstCommand::Reset()
     m_Header.m_Heading = 0xCA;
     m_Header.m_CommandNo = 0xA8;
     m_Header.m_CommandLength = 9;
-    m_Header.m_CommandType = COMMAND_1;
+    m_Header.m_CommandType = Common::COMMAND_1;
     m_A.Reset();
     m_B = 0;
 }

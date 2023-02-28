@@ -8,7 +8,7 @@ ServerCommandReceiver::ServerCommandReceiver() :
     m_CurrentIndex { 0 }
 {
     ICommandReader *commandReader = CommandReaderFactory::CreateCommandReader();
-    for (int i = 0; i< Specs::MAX_MESSAGE_IN_FILE;i++)
+    for (int i = 0; i< ServerConstants::MAX_MESSAGE_IN_FILE;i++)
     {
         memset(m_Commands[i], 0, sizeof(m_Commands[i]));
     }
@@ -21,7 +21,7 @@ bool ServerCommandReceiver::Read(uint8_t *buffer)
     if (m_CurrentIndex < m_Length)
     {
         bResult = true;
-        memcpy(buffer, &m_Commands[m_CurrentIndex], ByteStream::BUFFER_LENGTH);
+        memcpy(buffer, &m_Commands[m_CurrentIndex], Common::Constants::MAX_COMMAND_LENGTH);
         m_CurrentIndex++;
         LogBufferToConsole(buffer);
     }
@@ -39,7 +39,7 @@ void ServerCommandReceiver::LogBufferToConsole(uint8_t *buffer)
 {
     int length = buffer[1] - 1; // +1 Heading -2 CRC
     printf("ServerCommandReceiver::Buffer");
-    if(!EndianController::Instance()->IsBigEndian())
+    if(!Common::EndianController::Instance()->IsBigEndian())
         printf("(Little Endian)");
     printf(": ");
 

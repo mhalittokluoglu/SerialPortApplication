@@ -7,6 +7,8 @@
 #endif // LINUX_SYSTEM
 #include <cstddef>
 
+using namespace Common;
+
 ISerialConnection *SerialConnectionFactory::CreateSerialConnection()
 {
     ISerialConnection *connection = NULL;

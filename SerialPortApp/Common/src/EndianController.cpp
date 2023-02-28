@@ -1,9 +1,9 @@
 #include "EndianController.h"
 #include <cstddef>
 
+using namespace Common;
+
 EndianController  *EndianController::s_Instance = NULL;
-
-
 
 EndianController::EndianController() : m_IsBigEndian { true }
 {
@@ -23,9 +23,4 @@ EndianController* EndianController::Instance()
     if (s_Instance == NULL)
         s_Instance = new EndianController();
     return s_Instance;
-}
-
-void EndianController::ConvertFromLittleToBigEndian(char *inputBuffer, char *outputBuffer, int length)
-{
-    
 }

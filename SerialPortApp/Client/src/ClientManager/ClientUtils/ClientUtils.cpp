@@ -1,14 +1,16 @@
 #include "ClientUtils.h"
 #include "Commands/InvalidRequestCommand.h"
-#include "Commands/ByteStream.h"
+#include "Constants.h"
 #include <cstddef>
 #include <cstdio>
 
-ISerialConnection *ClientUtils::s_SerialConnection = NULL;
+using namespace Common;
 
-void ClientUtils::Initialize(ISerialConnection *serialConnection)
+IConnection *ClientUtils::s_Connection = NULL;
+
+void ClientUtils::Initialize(IConnection *connection)
 {
-    s_SerialConnection = serialConnection;
+    s_Connection = connection;
 }
 
 bool ClientUtils::SendInvalidRequestCommand(EnumInvalidCause cause)
@@ -20,19 +22,18 @@ bool ClientUtils::SendInvalidRequestCommand(EnumInvalidCause cause)
     {
         printf("  Command Type: InvalidRequestCommand\n");
         invalidRequestCommand.Log();
-        printf("\n");
         return true;
     }
     return false;
 }
 
-bool ClientUtils::SendCommand(ICommand *command)
+bool ClientUtils::SendCommand(ISerializableCommand *command)
 {
-    uint8_t buffer[ByteStream::BUFFER_LENGTH] = { 0 };
+    uint8_t buffer[Constants::MAX_COMMAND_LENGTH] = { 0 };
     uint32_t length = sizeof(buffer);
     ByteStream byteStream(buffer);
     command->Serialize(byteStream, length);
-    if (s_SerialConnection->Send((char*)buffer, length))
+    if (s_Connection->Send((char*)buffer, length))
     {
         printf("Message Sent: ");
         byteStream.Log();

@@ -1,8 +1,7 @@
 #include "FirstCommandParser.h"
 #include <sstream>
 #include <cstring>
-#include "Commands/DataElements.h"
-
+#include "Commands/CommandUtils.h"
 
 FirstCommandParser::FirstCommandParser() { }
 
@@ -30,7 +29,7 @@ bool FirstCommandParser::ParseCommand(const char *commandLine, uint8_t *outputBu
 
     outputBuffer[0] = 0xCA; // heading
     outputBuffer[1] = 0x09; // length
-    outputBuffer[2] = CommandMap[COMMAND_1];
+    outputBuffer[2] = Common::Utils::CommandMap[Common::COMMAND_1];
     outputBuffer[3] = dataA;
     memcpy(&outputBuffer[4], &dataB, sizeof(dataB));
 

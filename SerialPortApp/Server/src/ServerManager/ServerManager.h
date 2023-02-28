@@ -1,17 +1,12 @@
 #ifndef _SERVERMANAGER_H_
 #define _SERVERMANAGER_H_
-#include "IManager.h"
-#include "SerialConfiguration/ISerialConnection.h"
-#include "ServerProcessorFacade.h"
-class ServerManager : public IManager
+#include "IConnection.h"
+#include "CommandManager.h"
+
+class ServerManager : public Common::CommandManager
 {
 public:
-    ServerManager(ISerialConnection *connection);
+    ServerManager(Common::IConnection *connection);
     ~ServerManager();
-    void Run();
-
-private:
-    ISerialConnection *m_SerialConnection;
-    ServerProcessorFacade m_Facade;
 };
 #endif // _SERVERMANAGER_H_

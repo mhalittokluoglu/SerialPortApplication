@@ -3,6 +3,7 @@
 #include "ICommandReader.h"
 #include "Commands/DataElements.h"
 #include "CommandParser/ICommandParser.h"
+
 class CommandReader : public ICommandReader
 {
 public:
@@ -14,7 +15,7 @@ private:
     ICommandParser *m_Parsers[256];
 
 private:
-    EnumCommandType GetCommand(const char* commandString);
+    Common::EnumCommandType GetCommand(const char* commandString);
 
 };
 #endif // _COMMANDREADER_H_

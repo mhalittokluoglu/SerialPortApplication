@@ -4,6 +4,8 @@
 #include "ClientManager/ClientUtils/ClientUtils.h"
 #include <cstdio>
 
+using namespace Common;
+
 FirstCommandProcessor::FirstCommandProcessor() { }
 
 FirstCommandProcessor::~FirstCommandProcessor() { }
@@ -29,7 +31,7 @@ void FirstCommandProcessor::Process(ICommand *command)
     }
     else
     {
-        printf("  CRC is VALID\n\n");
+        printf("  CRC is VALID\n");
         printf("_______________________________________________\n");
         SecondCommand secondCommand;
         ReverseDataA(firstCommand->m_A, secondCommand.m_A);

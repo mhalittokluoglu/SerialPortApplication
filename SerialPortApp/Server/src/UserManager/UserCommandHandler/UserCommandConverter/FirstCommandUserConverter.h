@@ -7,7 +7,7 @@ class FirstCommandUserConverter : public IUserCommandConverter
 public:
     FirstCommandUserConverter();
     ~FirstCommandUserConverter();
-    bool Convert(ICommand *command, uint8_t *commandBuffer, char* userBuffer);
+    bool Convert(Common::ICommand *command, uint8_t *commandBuffer, char* userBuffer);
 
 };
 #endif // _FIRSTCOMMANDUSERCONVERTER_H_

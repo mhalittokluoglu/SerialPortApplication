@@ -3,15 +3,15 @@
 #include "Commands/ICommandProcessor.h"
 #include "Commands/Data/DataA.h"
 
-class FirstCommandProcessor : public ICommandProcessor
+class FirstCommandProcessor : public Common::ICommandProcessor
 {
 public:
     FirstCommandProcessor();
     ~FirstCommandProcessor();
-    void Process(ICommand *command);
+    void Process(Common::ICommand *command);
 
 private:
-    void ReverseDataA(const DataA &incomingDataA, DataA &outDataA);
+    void ReverseDataA(const Common::DataA &incomingDataA, Common::DataA &outDataA);
 };
 
 #endif // _FIRSTCOMMANDPROCESSOR_H_

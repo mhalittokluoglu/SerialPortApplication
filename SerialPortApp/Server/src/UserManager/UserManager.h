@@ -6,10 +6,10 @@
 #include "UserReceiver/IUserReceiver.h"
 #include "UserCommandHandler/UserCommandHandlerFacade.h"
 
-class UserManager : public IManager
+class UserManager : public Common::IManager
 {
 public:
-    UserManager(ApplicationState *state, ISerialConnection *connection);
+    UserManager(ApplicationState *state, Common::IConnection *connection);
     ~UserManager();
     void Run();
 private:
