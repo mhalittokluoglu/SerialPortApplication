@@ -43,7 +43,7 @@ void ServerCommandReceiver::LogBufferToConsole(uint8_t *buffer)
         printf("(Little Endian)");
     printf(": ");
 
-    for(int i = 0; i < length; i++)
+    for(int i = 3; i < length; i++) // Ignore Heading start from 3
     {
         printf("%02X", buffer[i]);
     }

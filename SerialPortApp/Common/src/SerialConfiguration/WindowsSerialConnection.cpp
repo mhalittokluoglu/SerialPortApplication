@@ -42,7 +42,7 @@ WindowsSerialConnection::~WindowsSerialConnection()
     CloseHandle(m_SerialHandle);
 }
 
-bool WindowsSerialConnection::Initialize(const SerialConfiguration &configuration, int vTime, int vMin)
+bool WindowsSerialConnection::Initialize(const SerialConfiguration &configuration, int vTimeInDesiSecond, int vMinInDesiSecond)
 {
     bool bResult = true;
     m_SerialHandle = CreateFile((LPCSTR)configuration.DEVICE, GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
@@ -65,8 +65,8 @@ bool WindowsSerialConnection::Initialize(const SerialConfiguration &configuratio
     SetCommState(m_SerialHandle, &serialParams);
 
     COMMTIMEOUTS timeout = { 0 };
-    timeout.ReadIntervalTimeout = vMin;
-    timeout.ReadTotalTimeoutConstant = vTime;
+    timeout.ReadIntervalTimeout = vMinInDesiSecond * 10;
+    timeout.ReadTotalTimeoutConstant = vTimeInDesiSecond * 10;
     timeout.ReadTotalTimeoutMultiplier = 1;
     timeout.WriteTotalTimeoutConstant = 0;
     timeout.WriteTotalTimeoutMultiplier = 1;

@@ -7,7 +7,7 @@ class WindowsSerialConnection : public ISerialConnection
 public:
     WindowsSerialConnection();
     ~WindowsSerialConnection();
-    bool Initialize(const SerialConfiguration &configuration, int vTime= 0, int vMin = 0);
+    bool Initialize(const SerialConfiguration &configuration, int vTimeInDesiSecond = 0, int vMinInDesiSecond = 0);
     bool Send(char *buffer, int len);
     bool Receive(char *buffer, int &len);
 private:

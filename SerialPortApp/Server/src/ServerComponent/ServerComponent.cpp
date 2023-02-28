@@ -21,7 +21,7 @@ ServerComponent::ServerComponent()
 #endif
     }
 
-    if (!serialConnection->Initialize(serialConfiguration, 10,0))
+    if (!serialConnection->Initialize(serialConfiguration, 1,0))
     {
 #ifdef LOG_ENABLED
         Logger::LOG_FATAL(COMPONENT_SERVER, "Serial Port Initilization Failed!");

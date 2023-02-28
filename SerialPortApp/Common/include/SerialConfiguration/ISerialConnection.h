@@ -5,7 +5,7 @@ class ISerialConnection
 {
 public:
     virtual ~ISerialConnection() { }
-    virtual bool Initialize(const SerialConfiguration &configuration, int vTime= 0, int vMin = 0) = 0;
+    virtual bool Initialize(const SerialConfiguration &configuration, int vTimeInDesiSecond = 0, int vMinInDesiSecond = 0) = 0;
     virtual bool Send(char *buffer, int len) = 0;
     virtual bool Receive(char *buffer, int &len) = 0;
 };

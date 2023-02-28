@@ -41,7 +41,7 @@ LinuxSerialConnection::~LinuxSerialConnection()
     close(m_SerialPortFileDescriptor);
 }
 
-bool LinuxSerialConnection::Initialize(const SerialConfiguration &configuration, int vTime, int vMin)
+bool LinuxSerialConnection::Initialize(const SerialConfiguration &configuration, int vTimeInDesiSecond, int vMinInDesiSecond)
 {
     m_SerialPortFileDescriptor = open(configuration.DEVICE, O_RDWR);
     if (m_SerialPortFileDescriptor < 0)
@@ -69,8 +69,8 @@ bool LinuxSerialConnection::Initialize(const SerialConfiguration &configuration,
     m_Options.c_iflag = IGNPAR;
     m_Options.c_oflag = 0;
     m_Options.c_lflag = 0;
-    m_Options.c_cc[VTIME] = vTime;
-    m_Options.c_cc[VMIN] = vMin;
+    m_Options.c_cc[VTIME] = vTimeInDesiSecond;
+    m_Options.c_cc[VMIN] = vMinInDesiSecond;
 
     tcflush(m_SerialPortFileDescriptor, TCIFLUSH);
     tcsetattr(m_SerialPortFileDescriptor, TCSANOW, &m_Options);
