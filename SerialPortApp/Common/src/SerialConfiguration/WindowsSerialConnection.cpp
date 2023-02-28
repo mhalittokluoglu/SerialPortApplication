@@ -28,8 +28,8 @@ static const int ByteSizeMap[] = {
 };
 
 static const int StopBitMap[] = {
-    1,
-    2
+    0, // 1 STOP BIT
+    3  // 2 STOP BIT
 };
 
 static const int ParityMap[] = {
