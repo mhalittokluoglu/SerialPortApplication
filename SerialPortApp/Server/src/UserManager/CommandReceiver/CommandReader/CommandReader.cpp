@@ -34,7 +34,7 @@ void CommandReader::ReadFromFile(const char *fileName, uint8_t *buffer, uint32_t
         if (commandType == Common::MAX_COMMAND)
         {
 #ifdef LOG_ENABLED
-            Logger::LOG_ERROR(COMPONENT_COMMON, "Unknown CommandType: %s in line: %d", commandTypeBuffer, i);
+            Logger::LOG_ERROR(COMPONENT_COMMON, "Unknown CommandType: %s in line: %d", commandTypeBuffer, i + 1);
 #endif // LOG_ENABLED
             offset++;
             continue;
@@ -42,7 +42,7 @@ void CommandReader::ReadFromFile(const char *fileName, uint8_t *buffer, uint32_t
         if (m_Parsers[commandType] == NULL)
         {
 #ifdef LOG_ENABLED
-            Logger::LOG_DEBUG(COMPONENT_COMMON, "CommandType %s is not implemented yet! line: %d", commandTypeBuffer, i);
+            Logger::LOG_DEBUG(COMPONENT_COMMON, "CommandType %s is not implemented yet! line: %d", commandTypeBuffer, i + 1);
 #endif // LOG_ENABLED
             offset++;
             continue;
@@ -54,7 +54,7 @@ void CommandReader::ReadFromFile(const char *fileName, uint8_t *buffer, uint32_t
             offset++;
             continue;
 #ifdef LOG_ENABLED
-            Logger::LOG_ERROR(COMPONENT_COMMON, "Unable to Parser CommandType %s in line: %d", commandTypeBuffer, i);
+            Logger::LOG_ERROR(COMPONENT_COMMON, "Unable to Parser CommandType %s in line: %d", commandTypeBuffer, i + 1);
 #endif // LOG_ENABLED
         }
 

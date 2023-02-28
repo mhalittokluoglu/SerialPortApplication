@@ -69,3 +69,6 @@ SerialPortApp/BuildDirLinux/Client/Client
 
 *.pyc
 *.log
+
+Binaries
+Binaries.zip
