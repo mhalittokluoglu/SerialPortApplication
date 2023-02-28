@@ -23,7 +23,7 @@ void InvalidUserCommandHandler::Handle(ICommand *command, EnumUserInputType user
             printf("Message Sent: ");
             byteStream.Log();
             invalidCommand->Log();
-            printf("\n");
+            printf("_______________________________________________\n");
         }
     }
     else

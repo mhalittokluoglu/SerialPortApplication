@@ -22,12 +22,15 @@ void FirstCommandProcessor::Process(ICommand *command)
     firstCommand->Log();
     if (bInvalidCrc)
     {
-        printf("  CRC IS INVALID, received: 0x%04X, calculated: 0x%04X\n\n", receivedCrc, crc);
+        printf("  CRC IS INVALID, received: 0x%04X, calculated: 0x%04X\n", receivedCrc, crc);
+        printf("_______________________________________________\n");
         ClientUtils::SendInvalidRequestCommand(EnumInvalidCause::MESSAGE_WITH_CRC_ERROR);
+        printf("_______________________________________________\n");
     }
     else
     {
         printf("  CRC is VALID\n\n");
+        printf("_______________________________________________\n");
         SecondCommand secondCommand;
         ReverseDataA(firstCommand->m_A, secondCommand.m_A);
         secondCommand.m_B = firstCommand->m_B * 2;
@@ -37,9 +40,9 @@ void FirstCommandProcessor::Process(ICommand *command)
         {
             printf("Command Type: Command 2:\n");
             secondCommand.Log();
+            printf("_______________________________________________\n");
         }
     }
-
 }
 
 void FirstCommandProcessor::ReverseDataA(const DataA &incomingDataA, DataA &outDataA)

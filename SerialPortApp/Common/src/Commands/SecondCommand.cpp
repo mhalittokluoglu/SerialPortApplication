@@ -36,7 +36,7 @@ bool SecondCommand::Deserialize(ByteStream &byteStream, const uint32_t &length)
         return false;
 
     uint8_t dataA;
-    if (!byteStream.ReadByte(dataA));
+    if (!byteStream.ReadByte(dataA))
         return false;
     m_A.Deserialize(dataA);
 

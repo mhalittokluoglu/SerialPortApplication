@@ -21,7 +21,7 @@ ServerComponent::ServerComponent()
 #endif
     }
 
-    if (!serialConnection->Initialize(serialConfiguration, 0,0))
+    if (!serialConnection->Initialize(serialConfiguration, 10,0))
     {
 #ifdef LOG_ENABLED
         Logger::LOG_FATAL(COMPONENT_SERVER, "Serial Port Initilization Failed!");
@@ -30,6 +30,7 @@ ServerComponent::ServerComponent()
 
     m_State = NORMAL;
     m_UserManager = new UserManager(&m_State, serialConnection);
+    m_ServerManager = new ServerManager(serialConnection);
 
 }
 
@@ -38,4 +39,5 @@ ServerComponent::~ServerComponent() { }
 void ServerComponent::RunApplication()
 {
     m_UserManager->Run();
+    m_ServerManager->Run();
 }

@@ -22,7 +22,6 @@ add_library(Common ${COMMON_FILES}
     include/Commands/Data/DataA.h
     include/Commands/ByteStream.h
     include/Commands/CommandHeader.h
-    include/Commands/CommandReceiverFacade.h
     include/Commands/DataElements.h
     include/Commands/FirstCommand.h
     include/Commands/ICommand.h

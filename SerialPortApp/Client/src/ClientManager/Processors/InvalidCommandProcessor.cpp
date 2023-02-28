@@ -14,5 +14,6 @@ void InvalidCommandProcessor::Process(ICommand *command)
     invalidCommand->Log();
     printf("\n");
     ClientUtils::SendInvalidRequestCommand(EnumInvalidCause::INVALID_MESSAGE);
+    printf("_______________________________________________\n");
 }
 

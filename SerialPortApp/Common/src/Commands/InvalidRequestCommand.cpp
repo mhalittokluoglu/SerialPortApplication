@@ -32,11 +32,11 @@ bool InvalidRequestCommand::Deserialize(ByteStream &byteStream, const uint32_t &
     if (!m_Header.Deserialize(byteStream, length))
         return false;
 
-    if (length < 10)
+    if (length < 5)
         return false;
 
     uint8_t dataInvalidCause;
-    if (!byteStream.ReadByte(dataInvalidCause));
+    if (!byteStream.ReadByte(dataInvalidCause))
         return false;
     m_InvalidCause = (EnumInvalidCause)dataInvalidCause;
 

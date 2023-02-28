@@ -32,7 +32,7 @@ void UserFirstCommandHandler::Handle(ICommand *command, EnumUserInputType userIn
             printf("Message Sent: ");
             byteStream.Log();
             command1->Log();
-            printf("\n");
+            printf("_______________________________________________\n");
         }
     }
     else
