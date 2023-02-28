@@ -319,6 +319,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\ClientManager\ClientUtils\ClientUtils.cpp" />
     <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\ClientManager\Processors\FirstCommandProcessor.cpp" />
     <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\ClientManager\Processors\InvalidCommandProcessor.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\Commands\FirstCommand.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\Commands\InvalidCommand.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\Commands\InvalidRequestCommand.cpp" />
+    <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\Commands\SecondCommand.cpp" />
     <ClCompile Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\main.cpp" />
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\ClientComponent\ClientComponent.h" />
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\ClientManager\ClientManager.h" />
@@ -326,6 +330,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\ClientManager\ClientUtils\ClientUtils.h" />
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\ClientManager\Processors\FirstCommandProcessor.h" />
     <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\ClientManager\Processors\InvalidCommandProcessor.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\Commands\FirstCommand.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\Commands\InvalidCommand.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\Commands\InvalidRequestCommand.h" />
+    <ClInclude Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\Client\src\Commands\SecondCommand.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\Halit\Desktop\Projects\SerialPortApplication\SerialPortApp\BuildDirWin\ZERO_CHECK.vcxproj">
