@@ -11,7 +11,7 @@ public:
     void Handle(Common::ICommand *command, EnumUserInputType userInputType);
 
 private:
-    Common::IConnection *m_SerialConnection;
+    Common::IConnection *m_Connection;
 };
 
 #endif // _USERFIRSTCOMMANDHANDLER_H_

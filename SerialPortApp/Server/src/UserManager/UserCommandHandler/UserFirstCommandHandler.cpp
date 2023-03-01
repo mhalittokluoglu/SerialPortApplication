@@ -7,7 +7,7 @@
 #include <cstdio>
 
 UserFirstCommandHandler::UserFirstCommandHandler(Common::IConnection *connection) :
-    m_SerialConnection { connection } { }
+    m_Connection { connection } { }
 
 UserFirstCommandHandler::~UserFirstCommandHandler() { }
 
@@ -28,7 +28,7 @@ void UserFirstCommandHandler::Handle(Common::ICommand *command, EnumUserInputTyp
     command1->m_Header.m_Crc = crc;
     if (command1->Serialize(byteStream, length))
     {
-        if (m_SerialConnection->Send((char*)buffer, length))
+        if (m_Connection->Send((char*)buffer, length))
         {
             printf("Message Sent: ");
             byteStream.Log();

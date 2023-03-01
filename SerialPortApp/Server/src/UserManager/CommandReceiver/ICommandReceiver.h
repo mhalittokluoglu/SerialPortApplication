@@ -4,6 +4,7 @@
 class ICommandReceiver
 {
 public:
+    virtual ~ICommandReceiver() { }
     virtual bool Read(uint8_t *buffer) = 0;
 };
 #endif // _ICOMMANDRECEIVER_H_
